@@ -96,3 +96,14 @@
 *, ::after, ::before {
     box-sizing: border-box;
 }
+
+.text-pink {
+    color: #e4b5cb; 
+  }
+
+  .text-violet {
+    color: #722ae6; 
+  }
+  .bg-custom-pink {
+    background-color: #e4b5cb; 
+  }
