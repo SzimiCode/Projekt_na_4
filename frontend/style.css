@@ -107,3 +107,14 @@
   .bg-custom-pink {
     background-color: #e4b5cb; 
   }
+  .list-group-item-violet{
+    background-color: #E38AAE; 
+    color: white;
+  }
+  .list-group-item-pink{
+    background-color: #e4b5cb; 
+    color: white;
+  }
+.text-white{
+  color: white;
+}
