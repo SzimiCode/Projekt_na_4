@@ -18,13 +18,13 @@ To do:
         +end_time
         +description
         +geo
-        //short event?
-    
+        +public/not_public
+
     User:
         +login
         +password
         +settings
-        +id?
+        +id
 
     Exp:
         +id of event
@@ -33,6 +33,9 @@ To do:
         +userId
         +points
         +description
+    
+
+
     
     
     
