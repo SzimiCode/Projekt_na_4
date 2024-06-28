@@ -16,7 +16,27 @@
           text-decoration: line-through;
           color: grey;
         }
-      </style>
+        .category-badge {
+          background-image: linear-gradient(315deg, #e4b5cb 0%, #722ae6 74%);
+          background-color: #e4b5cb;
+          background-size: 180% 180%;
+          animation: gradient-animation 18s ease infinite;
+          border-radius: 50px;
+          color: white;
+          padding: 5px 10px;
+          font-size: 0.75em;
+          width: 100px; /* Stała szerokość */
+          height: 30px; /* Stała wysokość */
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        @keyframes gradient-animation {
+          0% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+          100% { background-position: 0% 50%; }
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary gradient-navbar">
@@ -58,6 +78,7 @@
             <input type="checkbox" class="task-checkbox">
             <span>Task 1</span>
           </div>
+          <div class="category-badge">Support</div>
         </div>
       </li>
       <li class="list-group-item">
@@ -66,6 +87,7 @@
             <input type="checkbox" class="task-checkbox">
             <span>Task 2</span>
           </div>
+          <div class="category-badge">Sales</div>
         </div>
       </li>
       <li class="list-group-item">
@@ -74,6 +96,7 @@
             <input type="checkbox" class="task-checkbox">
             <span>Task 3</span>
           </div>
+          <div class="category-badge">Marketing</div>
         </div>
       </li>
       <li class="list-group-item">
@@ -82,6 +105,7 @@
             <input type="checkbox" class="task-checkbox">
             <span>Task 4</span>
           </div>
+          <div class="category-badge">Development</div>
         </div>
       </li>
     </ul>
@@ -98,6 +122,7 @@
             <input type="checkbox" class="task-checkbox">
             <span>Task 1</span>
           </div>
+          <div class="category-badge">Support</div>
         </div>
       </li>
       <li class="list-group-item">
@@ -106,6 +131,7 @@
             <input type="checkbox" class="task-checkbox">
             <span>Task 2</span>
           </div>
+          <div class="category-badge">Sales</div>
         </div>
       </li>
       <li class="list-group-item">
@@ -114,6 +140,7 @@
             <input type="checkbox" class="task-checkbox">
             <span>Task 3</span>
           </div>
+          <div class="category-badge">Marketing</div>
         </div>
       </li>
       <li class="list-group-item">
@@ -122,6 +149,7 @@
             <input type="checkbox" class="task-checkbox">
             <span>Task 4</span>
           </div>
+          <div class="category-badge">Development</div>
         </div>
       </li>
     </ul>
@@ -137,6 +165,7 @@
             <input type="checkbox" class="task-checkbox">
             <span>Task 1</span>
           </div>
+          <div class="category-badge">Support</div>
         </div>
       </li>
       <li class="list-group-item">
@@ -145,47 +174,32 @@
             <input type="checkbox" class="task-checkbox">
             <span>Task 2</span>
           </div>
-        </div>
-      </li>
-      <li class="list-group-item">
-        <div class="d-flex justify-content-between align-items-center">
-          <div>
-            <input type="checkbox" class="task-checkbox">
-            <span>Task 3</span>
-          </div>
-        </div>
-      </li>
-      <li class="list-group-item">
-        <div class="d-flex justify-content-between align-items-center">
-          <div>
-            <input type="checkbox" class="task-checkbox">
-            <span>Task 4</span>
-          </div>
+          <div class="category-badge">Sales</div>
         </div>
       </li>
     </ul>
-  </div>
+</div>
 
 </div>
- <!-- 
+<!-- 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const checkboxes = document.querySelectorAll('.task-checkbox');
+document.addEventListener('DOMContentLoaded', function() {
+  const checkboxes = document.querySelectorAll('.task-checkbox');
 
-    checkboxes.forEach(checkbox => {
-      checkbox.addEventListener('change', function() {
-        const taskText = this.nextElementSibling;
-        if (this.checked) {
-          taskText.classList.add('completed');
-        } else {
-          taskText.classList.remove('completed');
-        }
-      });
+  checkboxes.forEach(checkbox => {
+    checkbox.addEventListener('change', function() {
+      const taskText = this.nextElementSibling;
+      if (this.checked) {
+        taskText.classList.add('completed');
+      } else {
+        taskText.classList.remove('completed');
+      }
     });
   });
+});
 </script>
 -->
 
