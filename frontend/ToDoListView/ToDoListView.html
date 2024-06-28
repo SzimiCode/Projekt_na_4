@@ -8,6 +8,88 @@
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-    
+    <nav class="navbar navbar-expand-lg bg-body-tertiary gradient-navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="https://s3u.tmimgcdn.com/u37752224/43c1a0392276fa50b4cfa03170da0d9e.gif" alt="Box" height="20">TaskHero</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">ToDoList</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+     <!-- Search Bar -->
+     <div class="container mt-5">
+     <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Search tasks" aria-label="Search tasks">
+      </div>
+      <!-- Task Sections -->
+    <div class="card mb-3">
+        <div class="card-header bg-custom-pink text-white">
+          <h5 class="mb-0">Category 1</h5>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">
+            <div class="d-flex justify-content-between">
+              <span>Task 1</span>
+              <div class="task-status">
+                <span class="badge badge-warning">Support</span>
+                <span>1/3</span>
+              </div>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="d-flex justify-content-between">
+              <span>Send out sales report</span>
+              <div class="task-status">
+                <span class="badge badge-primary">Sales</span>
+                <span>1/3</span>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+  
+      <div class="card mb-3">
+        <div class="card-header bg-custom-violet text-white">
+          <h5 class="mb-0">Category 2</h5>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">
+            <div class="d-flex justify-content-between">
+              <span>Task 1</span>
+              <div class="task-status">
+                <span class="badge badge-danger">In Progress</span>
+
+              </div>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="d-flex justify-content-between">
+              <span>Task 2</span>
+              <div class="task-status">
+                <span class="badge badge-danger">In Progress</span>
+                <span>1/3</span>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  
+
+
 </body>
 </html>
