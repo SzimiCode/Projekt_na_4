@@ -1,38 +1,41 @@
-# TeskHero, Projekt_na_4
- The application to menage your time, more than callendar. 
+# TaskHero, Projekt_na_4
+ The application to manage your time in a fun way. Much more than calendar. 
 
 Functionality:
 + Pulling events from calendar
 + Some thing that habitica do
-+ Ability to chceck if you did sth 
++ Ability to check your progress
 
 
 To do:
 
 1. Database:
 
-    Callendar Event (per user?):
+    Calendar Event (per user?):
         +id
         +summary
         +start_time
         +end_time
         +description
         +geo
-        //short event?
-    
+        +public/not_public
+
     User:
         +login
         +password
         +settings
-        +id?
+        +id
 
     Exp:
         +id of event
-        +if done
+        +completion_status
         +finished_time
         +userId
         +points
         +description
+    
+
+
     
     
     
