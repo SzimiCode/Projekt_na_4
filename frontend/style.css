@@ -208,3 +208,17 @@ font-size: 1em;
   margin-right: 10px;
  
 }
+
+
+
+
+
+
+
+
+
+.btn-primary {
+  color: #212529;
+  background-color: #e4b5cb;
+  border-color: #e4b5cb;
+}
