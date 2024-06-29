@@ -211,7 +211,16 @@ font-size: 1em;
 
 
 .date-badge{
-  
+  border-color: #6610f2;
+  background-size: 180% 180%;
+  border-radius: 50px;
+  width: 100px;
+  height: 30px; /* Stała wysokość */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px;
+  margin-right: 10px;
 }
 
 
