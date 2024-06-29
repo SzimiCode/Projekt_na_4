@@ -217,8 +217,23 @@ font-size: 1em;
 
 
 
-.btn-primary {
-  color: #212529;
-  background-color: #e4b5cb;
-  border-color: #e4b5cb;
+.btn-pink {
+  color: white;
+  border-color: #E38AAE;
+  background-color: #E38AAE;
+}
+.btn-outline-pink{
+  color: #722ae6;
+  border-color: #722ae6;
+}
+.border-pink{
+  border-color: #E38AAE;
+}
+.text-bg-pink{
+  background-color: #E38AAE;
+}
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  max-height: 500px; 
 }

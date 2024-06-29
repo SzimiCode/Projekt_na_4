@@ -24,6 +24,9 @@
                         <a class="nav-link" href="#">ToDoList</a>
                     </li>
                     <li class="nav-item">
+                      <a class="nav-link" href="#">Add Task</a>
+                  </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="#">About Us</a>
                     </li>
                 </ul>
@@ -36,7 +39,7 @@
      <div class="input-group mb-3">
         <input type="text" class="form-control" placeholder="Search tasks" aria-label="Search tasks">
         <div class="button-container text-center">
-            <button class="btn gradient-button mx-2">Add</button>
+            <button class="btn gradient-button mx-2" id="addTaskButton">Add</button>
         </div>
       </div>
 <!-- Task Sections -->
@@ -47,43 +50,55 @@
     <ul class="list-group list-group-flush">
       <li class="list-group-item">
         <div class="d-flex justify-content-between align-items-center">
-          <div>
+          <div class="d-flex align-items-center">
             <input type="checkbox" class="task-checkbox">
-            <span>Task 1</span>
+            <span class="ml-2">Task 1</span>
           </div>
-          <div class="category-badge">Support</div>
+          <div class="d-flex align-items-center">
+            <div class="xp-badge ml-2">50xp</div>
+            <div class="category-badge ml-2">Support</div>
+          </div>
         </div>
       </li>
       <li class="list-group-item">
         <div class="d-flex justify-content-between align-items-center">
-          <div>
+          <div class="d-flex align-items-center">
             <input type="checkbox" class="task-checkbox">
-            <span>Task 2</span>
+            <span class="ml-2">Task 2</span>
           </div>
-          <div class="category-badge">Sales</div>
+          <div class="d-flex align-items-center">
+            <div class="xp-badge ml-2">30xp</div>
+            <div class="category-badge ml-2">Sales</div>
+          </div>
         </div>
       </li>
       <li class="list-group-item">
         <div class="d-flex justify-content-between align-items-center">
-          <div>
+          <div class="d-flex align-items-center">
             <input type="checkbox" class="task-checkbox">
-            <span>Task 3</span>
+            <span class="ml-2">Task 3</span>
           </div>
-          <div class="category-badge">Marketing</div>
+          <div class="d-flex align-items-center">
+            <div class="xp-badge ml-2">40xp</div>
+            <div class="category-badge ml-2">Marketing</div>
+          </div>
         </div>
       </li>
       <li class="list-group-item">
         <div class="d-flex justify-content-between align-items-center">
-          <div>
+          <div class="d-flex align-items-center">
             <input type="checkbox" class="task-checkbox">
-            <span>Task 4</span>
+            <span class="ml-2">Task 4</span>
           </div>
-          <div class="category-badge">Development</div>
+          <div class="d-flex align-items-center">
+            <div class="xp-badge ml-2">60xp</div>
+            <div class="category-badge ml-2">Development</div>
+          </div>
         </div>
       </li>
     </ul>
   </div>
-
+  
   <div class="card mb-3">
     <div class="card-header bg-custom-violet text-white">
       <h5 class="mb-0">Category 2</h5>
@@ -91,42 +106,55 @@
     <ul class="list-group list-group-flush">
       <li class="list-group-item">
         <div class="d-flex justify-content-between align-items-center">
-          <div>
+          <div class="d-flex align-items-center">
             <input type="checkbox" class="task-checkbox">
-            <span>Task 1</span>
+            <span class="ml-2">Task 1</span>
           </div>
-          <div class="category-badge">Support</div>
+          <div class="d-flex align-items-center">
+            <div class="xp-badge ml-2">45xp</div>
+            <div class="category-badge ml-2">Support</div>
+          </div>
         </div>
       </li>
       <li class="list-group-item">
         <div class="d-flex justify-content-between align-items-center">
-          <div>
+          <div class="d-flex align-items-center">
             <input type="checkbox" class="task-checkbox">
-            <span>Task 2</span>
+            <span class="ml-2">Task 2</span>
           </div>
-          <div class="category-badge">Sales</div>
+          <div class="d-flex align-items-center">
+            <div class="xp-badge ml-2">25xp</div>
+            <div class="category-badge ml-2">Sales</div>
+          </div>
         </div>
       </li>
       <li class="list-group-item">
         <div class="d-flex justify-content-between align-items-center">
-          <div>
+          <div class="d-flex align-items-center">
             <input type="checkbox" class="task-checkbox">
-            <span>Task 3</span>
+            <span class="ml-2">Task 3</span>
           </div>
-          <div class="category-badge">Marketing</div>
+          <div class="d-flex align-items-center">
+            <div class="xp-badge ml-2">35xp</div>
+            <div class="category-badge ml-2">Marketing</div>
+          </div>
         </div>
       </li>
       <li class="list-group-item">
         <div class="d-flex justify-content-between align-items-center">
-          <div>
+          <div class="d-flex align-items-center">
             <input type="checkbox" class="task-checkbox">
-            <span>Task 4</span>
+            <span class="ml-2">Task 4</span>
           </div>
-          <div class="category-badge">Development</div>
+          <div class="d-flex align-items-center">
+            <div class="xp-badge ml-2">55xp</div>
+            <div class="category-badge ml-2">Development</div>
+          </div>
         </div>
       </li>
     </ul>
   </div>
+  
   <div class="card mb-3">
     <div class="card-header bg-custom-pink text-white">
       <h5 class="mb-0">Category 3</h5>
@@ -134,44 +162,97 @@
     <ul class="list-group list-group-flush">
       <li class="list-group-item">
         <div class="d-flex justify-content-between align-items-center">
-          <div>
+          <div class="d-flex align-items-center">
             <input type="checkbox" class="task-checkbox">
-            <span>Task 1</span>
+            <span class="ml-2">Task 1</span>
           </div>
-          <div class="category-badge">Support</div>
+          <div class="d-flex align-items-center">
+            <div class="xp-badge ml-2">55xp</div>
+            <div class="category-badge ml-2">Support</div>
+          </div>
         </div>
       </li>
       <li class="list-group-item">
         <div class="d-flex justify-content-between align-items-center">
-          <div>
+          <div class="d-flex align-items-center">
             <input type="checkbox" class="task-checkbox">
-            <span>Task 2</span>
+            <span class="ml-2">Task 2</span>
           </div>
-          <div class="category-badge">Sales</div>
+          <div class="d-flex align-items-center">
+            <div class="xp-badge ml-2">35xp</div>
+            <div class="category-badge ml-2">Sales</div>
+          </div>
         </div>
       </li>
       <li class="list-group-item">
         <div class="d-flex justify-content-between align-items-center">
-          <div>
+          <div class="d-flex align-items-center">
             <input type="checkbox" class="task-checkbox">
-            <span>Task 3</span>
+            <span class="ml-2">Task 3</span>
           </div>
-          <div class="category-badge">Marketing</div>
+          <div class="d-flex align-items-center">
+            <div class="xp-badge ml-2">45xp</div>
+            <div class="category-badge ml-2">Marketing</div>
+          </div>
         </div>
       </li>
       <li class="list-group-item">
         <div class="d-flex justify-content-between align-items-center">
-          <div>
+          <div class="d-flex align-items-center">
             <input type="checkbox" class="task-checkbox">
-            <span>Task 4</span>
+            <span class="ml-2">Task 4</span>
           </div>
-          <div class="category-badge">Development</div>
+          <div class="d-flex align-items-center">
+            <div class="xp-badge ml-2">65xp</div>
+            <div class="category-badge ml-2">Development</div>
+          </div>
         </div>
       </li>
     </ul>
+  </div>
+  
+</div>
+<!-- POPPING VIEW -->
+<!-- Modal -->
+<div class="modal fade" id="taskModal" tabindex="-1" aria-labelledby="taskModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="taskModalLabel">Add Task</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="taskForm">
+          <div class="mb-3">
+            <label for="taskTitle" class="form-label">Title</label>
+            <input type="text" class="form-control" id="taskTitle" required>
+          </div>
+          <div class="mb-3">
+            <label for="taskDescription" class="form-label">Description</label>
+            <textarea class="form-control" id="taskDescription" rows="3"></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="taskCategory" class="form-label">Category</label>
+            <input type="text" class="form-control" id="taskCategory" required>
+          </div>
+          <div class="mb-3">
+            <label for="taskXp" class="form-label">XP</label>
+            <input type="number" class="form-control" id="taskXp" required>
+          </div>
+          <div class="mb-3">
+            <label for="taskDate" class="form-label">Date</label>
+            <input type="date" class="form-control" id="taskDate" required>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="saveTaskButton">Save changes</button>
+      </div>
+    </div>
+  </div>
 </div>
 
-</div>
    <!-- Footer -->
    <footer class="mt-auto gradient-background footer text-white">
     <div class="container ">
@@ -213,7 +294,11 @@
 </footer>
 <!-- End of Footer -->
 </div>
-<!-- 
+<!-- Bootstrap JS (Popper.js included) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.6.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.0.0-beta1/js/bootstrap.min.js"></script>
+<!-- Custom JS -->
+<script src="addEventListener.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -233,7 +318,8 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 </script>
--->
+
+
 
 </body>
 </html>
