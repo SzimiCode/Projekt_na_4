@@ -3,6 +3,7 @@ from django.contrib import admin
 from django.urls import path,include
 from api.views import CreateUserView
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
+from api import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -10,7 +11,11 @@ urlpatterns = [
     path("api/token/", TokenObtainPairView.as_view(), name="token_obtain_pair"),
     path("api/token/refresh/", TokenRefreshView.as_view(), name="token_refresh"),
     path("api-auth/", include("rest_framework.urls", namespace="rest_framework")),
-    path("api/", include("api.urls")),
+    #app urls
+    path("api/register/", views.CreateUserView.as_view(), name="register"),
+    path("api/event/", views.CallendarEventViewCreate.as_view(), name="event"),
+    path("api/event_delate/<int:pk>/", views.CallendarEventViewDelate.as_view(), name="event"),
+    path("api/experience/", views.ExperienceViewCreate.as_view(), name="experience"),
 
 ]
 
