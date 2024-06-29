@@ -175,7 +175,6 @@ font-size: 1em;
   border-radius: 5px;
   font-size: 1em;
 }
-
 .task-checkbox {
   width: 20px;
   height: 20px;
@@ -218,6 +217,12 @@ font-size: 1em;
 
 
 .btn-pink {
+  color: white;
+  border-color: #722ae6;
+  background-color: #722ae6;
+}
+
+.btn-violet {
   color: white;
   border-color: #E38AAE;
   background-color: #E38AAE;
