@@ -107,3 +107,253 @@
   .bg-custom-pink {
     background-color: #e4b5cb; 
   }
+  .bg-custom-violet {
+    background-color: #722ae6; 
+  }
+  .list-group-item-violet{
+    background-color: #E38AAE; 
+    color: white;
+  }
+  .list-group-item-pink{
+    background-color: #e4b5cb; 
+    color: white;
+  }
+.text-white{
+  color: white;
+}
+
+
+ /* To DO List View CSS*/
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.completed {
+  text-decoration: line-through;
+  color: grey;
+}
+.category-badge {
+  background-image: linear-gradient(315deg, #e4b5cb 0%, #722ae6 74%);
+  background-color: #e4b5cb;
+  background-size: 180% 180%;
+  animation: gradient-animation 18s ease infinite;
+  border-radius: 50px;
+  color: white;
+  padding: 5px 10px;
+  font-size: 0.75em;
+  width: 100px; /* Stała szerokość */
+  height: 30px; /* Stała wysokość */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@keyframes gradient-animation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.gradient-button {
+background-image: linear-gradient(315deg, #e4b5cb 0%, #722ae6 74%);
+background-color: #e4b5cb;
+background-size: 180% 180%;
+animation: gradient-animation 18s ease infinite;
+border: none;
+color: white;
+padding: 10px 20px;
+border-radius: 5px;
+font-size: 1em;
+}
+.gradient-button {
+  background-image: linear-gradient(315deg, #e4b5cb 0%, #722ae6 74%);
+  background-color: #e4b5cb;
+  background-size: 180% 180%;
+  animation: gradient-animation 18s ease infinite;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1em;
+
+}
+.task-checkbox {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #722ae6;
+  background-color: transparent;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.task-checkbox:checked {
+  background-color: #722ae6;
+}
+.xp-badge {
+  background-image: linear-gradient(315deg, #e4b5cb 0%, #722ae6 74%);
+  background-color: #e4b5cb;
+  background-size: 180% 180%;
+  animation: gradient-animation 18s ease infinite;
+  border-radius: 50px;
+  color: white;
+  padding: 5px 10px;
+  font-size: 0.75em;
+  width: 60px; /* Stała szerokość */
+  height: 30px; /* Stała wysokość */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px;
+  margin-right: 10px;
+ 
+}
+
+
+.date-badge{
+  border-color: #6610f2;
+  background-size: 180% 180%;
+  border-radius: 50px;
+  width: 100px;
+  height: 30px; /* Stała wysokość */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px;
+  margin-right: 100px;
+  background-color: pink;
+}
+
+
+
+
+
+
+.btn-pink {
+  color: white;
+  border-color: #722ae6;
+  background-color: #722ae6;
+}
+
+.btn-violet {
+  color: white;
+  border-color: #E38AAE;
+  background-color: #E38AAE;
+}
+.btn-outline-pink{
+  color: #722ae6;
+  border-color: #722ae6;
+}
+.border-pink{
+  border-color: #E38AAE;
+}
+.text-bg-pink{
+  background-color: #E38AAE;
+}
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  max-height: 500px; 
+}
+
+
+
+
+.calendar-container {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.month-year {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+}
+
+.day {
+  border: 1px solid #ddd;
+  padding: 10px;
+  position: relative;
+  cursor: pointer;
+  width: 120px;
+  height: 120px;
+}
+
+.event {
+  padding: 2px 4px;
+  margin-top: 5px;
+  display: inline-block;
+  border-radius: 3px;
+}
+
+.event.all-day {
+  background-color: #f5a623;
+  color: white;
+}
+
+.event.long-event {
+  background-color: #f54242;
+  color: white;
+}
+
+.event.repeating-event {
+  background-color: #4287f5;
+  color: white;
+}
+
+.event.conference {
+  background-color: #42f554;
+  color: white;
+}
+
+.event.birthday-party {
+  background-color: #f542a7;
+  color: white;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
