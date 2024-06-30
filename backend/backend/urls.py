@@ -16,6 +16,8 @@ urlpatterns = [
     path("api/event/", views.CallendarEventViewCreate.as_view(), name="event"),
     path("api/event_delate/<int:pk>/", views.CallendarEventViewDelate.as_view(), name="event"),
     path("api/experience/", views.ExperienceViewCreate.as_view(), name="experience"),
+    
+
 
 ]
 
