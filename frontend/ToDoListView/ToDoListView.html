@@ -37,7 +37,7 @@
      <!-- Search Bar -->
      <div class="container mt-5">
      <div class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="Search tasks" aria-label="Search tasks">
+        
         <div class="button-container text-center">
             <button class="btn gradient-button mx-2" id="addTaskButton">Add</button>
         </div>
@@ -315,22 +315,21 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  const checkboxes = document.querySelectorAll('.task-checkbox');
+ <!-- Your Custom JavaScript -->
+ <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var openModalButton = document.getElementById('openModalButton');
+    var testModal = new bootstrap.Modal(document.getElementById('testModal'), {
+      backdrop: 'static', // static for not closing on backdrop click
+      keyboard: false // false for not closing on escape key press
+    });
 
-  checkboxes.forEach(checkbox => {
-    checkbox.addEventListener('change', function() {
-      const taskText = this.nextElementSibling;
-      if (this.checked) {
-        taskText.classList.add('completed');
-      } else {
-        taskText.classList.remove('completed');
-      }
+    openModalButton.addEventListener('click', function () {
+      testModal.show();
     });
   });
-});
 </script>
+
 
 
 
