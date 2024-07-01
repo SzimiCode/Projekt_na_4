@@ -24,7 +24,7 @@ class CallendarEventViewCreate(generics.ListCreateAPIView):
 
     def get_queryset(self):
         return self.queryset.filter(owner=self.request.user)
-        ##BŁĄD
+        
 
 
 class CallendarEventViewDelate(generics.DestroyAPIView):
