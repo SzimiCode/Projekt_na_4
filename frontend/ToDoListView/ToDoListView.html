@@ -237,47 +237,50 @@
   
 </div>
 <!-- POPPING VIEW -->
-  <!-- Modal -->
-  <div class="modal fade" id="taskModal" tabindex="-1" aria-labelledby="taskModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="taskModalLabel">Add Task</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <form id="taskForm">
-            <div class="mb-3">
-              <label for="taskTitle" class="form-label">Title</label>
-              <input type="text" class="form-control" id="taskTitle" required>
-            </div>
-            <div class="mb-3">
-              <label for="taskDescription" class="form-label">Description</label>
-              <textarea class="form-control" id="taskDescription" rows="3"></textarea>
-            </div>
-            <div class="mb-3">
-              <label for="taskCategory" class="form-label">Category</label>
-              <input type="text" class="form-control" id="taskCategory" required>
-            </div>
-            <div class="mb-3">
-              <label for="taskXp" class="form-label">XP</label>
-              <input type="number" class="form-control" id="taskXp" required>
-            </div>
-            <div class="mb-3">
-              <label for="taskDate" class="form-label">Date</label>
-              <input type="date" class="form-control" id="taskDate" required>
-            </div>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-violet" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-pink" id="saveTaskButton">Save changes</button>
-        </div>
+<div class="modal fade" id="taskModal" tabindex="-1" aria-labelledby="taskModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="taskModalLabel">Add Task</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="taskForm">
+          <div class="mb-3">
+            <label for="taskTitle" class="form-label">Title</label>
+            <input type="text" class="form-control" id="taskTitle" required>
+          </div>
+          <div class="mb-3">
+            <label for="taskDescription" class="form-label">Description</label>
+            <textarea class="form-control" id="taskDescription" rows="3"></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="taskCategory" class="form-label">Category</label>
+            <select class="form-select" id="taskCategory" required>
+              <option value="">Select a category</option>
+              <option value="Family">Family</option>
+              <option value="Work">Work</option>
+              <option value="Life">Life</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="taskXp" class="form-label">XP</label>
+            <input type="number" class="form-control" id="taskXp" required min="0">
+          </div>
+          <div class="mb-3">
+            <label for="taskDate" class="form-label">Date</label>
+            <input type="date" class="form-control" id="taskDate" required>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="saveTaskButton">Save changes</button>
+
       </div>
     </div>
   </div>
 </div>
-
 <footer class="mt-auto gradient-background footer text-white">
   <div class="container ">
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 mt-5 border-top text-white">
