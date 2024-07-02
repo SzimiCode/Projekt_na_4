@@ -14,7 +14,7 @@ function AboutUsView() {
       {/* Navbar */}
       <nav className="navbar navbar-expand-lg bg-body-tertiary gradient-navbar">
         <div className="container-fluid">
-          <a className="navbar-brand" href="../MainView/mainView.html">
+          <a className="navbar-brand" href="../">
             <img src="https://s3u.tmimgcdn.com/u37752224/43c1a0392276fa50b4cfa03170da0d9e.gif" alt="Box" height="20" />
             TaskHero
           </a>
