@@ -14,7 +14,7 @@ function AboutUsView() {
       {/* Navbar */}
       <nav className="navbar navbar-expand-lg bg-body-tertiary gradient-navbar">
         <div className="container-fluid">
-          <a className="navbar-brand" href="../MainView/mainView.html">
+          <a className="navbar-brand" href="../">
             <img src="https://s3u.tmimgcdn.com/u37752224/43c1a0392276fa50b4cfa03170da0d9e.gif" alt="Box" height="20" />
             TaskHero
           </a>
@@ -25,7 +25,7 @@ function AboutUsView() {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link" href="../MainView/mainView.html">Home</a>
+                <a className="nav-link" href="../">Home</a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="../ToDoListView/ToDoListView.html">ToDoList</a>
