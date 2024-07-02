@@ -6,6 +6,9 @@ import Home from "./pages/Home"
 import NotFound from "./pages/NotFound"
 import ProtectedRoute from "./components/ProtectedRoute"
 import SzymView from "./pages/AboutUsView"
+import ToDoListView from "./pages/ToDoListView"
+import CalendarView from "./pages/CalendarView"
+
 
 function Logout() {
   localStorage.clear()
@@ -33,7 +36,7 @@ function App() {
           path="/calendar"
           element={
             <ProtectedRoute>
-              <calendarView />
+              <CalendarView />
             </ProtectedRoute>
           }
         />
