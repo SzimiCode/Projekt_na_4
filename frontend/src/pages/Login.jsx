@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+//import 'bootstrap/dist/css/bootstrap.min.css';
+//import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import "../styles/style.css"; // Upewnij się, że ścieżka do pliku CSS jest poprawna
 import Form from "../components/Form";
 
