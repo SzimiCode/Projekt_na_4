@@ -4,8 +4,8 @@ import "../styles/style.css";
 import catImage from '../assets/Images/cat.jpg';
 import womanImage from '../assets/Images/woman.jpg';
 import manWorkingImage from '../assets/Images/Man-working.jpg';
-//import 'bootstrap/dist/css/bootstrap.min.css';
-//import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 function AboutUsView() {
   
