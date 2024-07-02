@@ -5,10 +5,8 @@ const Navbar = ({ isLoggedIn, handleLogout }) => {
   const history = useHistory();
 
   const handleLogoutClick = () => {
-    // Tutaj możesz dodać kod do wylogowania użytkownika, np. usunięcie tokena, zakończenie sesji, itp.
-    // Przykładowo, po wylogowaniu przekieruj użytkownika na stronę logowania
     handleLogout();
-    history.push("/login"); // Przekierowanie na stronę logowania
+    history.push("/login");
   };
 
   return (
