@@ -11,17 +11,21 @@ function Form({ route, method }) {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({
-        username,
-        password,
-      }),
+      body: JSON.stringify({ username, password }),
     });
-    const data = await response.json();
-    console.log(data);
+
+    if (response.ok) {
+      const data = await response.json();
+      console.log('Token:', data.token);
+      // Możesz przechować token w localStorage lub w stanie aplikacji
+    } else {
+      console.error('Login failed');
+    }
   };
 
   return (
     <form onSubmit={handleSubmit}>
+      <p className="mb-5">Please login to your account</p>
       <div className="form-outline mb-4">
         <input
           type="email"
@@ -44,11 +48,15 @@ function Form({ route, method }) {
         <label className="form-label" htmlFor="form2Example22">Password</label>
       </div>
       <div className="text-center pt-1 mb-5 pb-1">
-        <button
-          type="submit"
-          className="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3"
-        >
+        <button className="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit">
           Log in
+        </button>
+        <a className="text-muted" href="#!">Forgot password?</a>
+      </div>
+      <div className="d-flex align-items-center justify-content-center pb-4">
+        <p className="mb-0 me-2">Don't have an account?</p>
+        <button type="button" className="btn btn-outline-dark">
+          Create new
         </button>
       </div>
     </form>
