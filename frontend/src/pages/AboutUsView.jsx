@@ -3,8 +3,17 @@ import "../styles/style.css";
 import catImage from '../assets/Images/cat.jpg';
 import womanImage from '../assets/Images/woman.jpg';
 import manWorkingImage from '../assets/Images/Man-working.jpg';
+import Navbar from "../components/Navbar";
 
 function AboutUsView() {
+
+  const [isLoggedIn, setIsLoggedIn] = useState(true); // Przykładowy stan zalogowania
+
+  const handleLogout = () => {
+    setIsLoggedIn(false); // Ustawienie stanu zalogowania na false po wylogowaniu
+    // Tutaj możesz dodać dodatkową logikę wylogowania, jeśli jest potrzebna
+  };
+
   useEffect(() => {
     // Funkcja do załadowania skryptu
     const loadScript = (src) => {
@@ -35,6 +44,8 @@ function AboutUsView() {
   }, []);
 
   return (
+    <div>
+      <Navbar isLoggedIn={isLoggedIn} handleLogout={handleLogout} />
     <div className="container-fluid p-0" style={{ marginTop: '0px' }}>
       <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
         <div className="carousel-indicators">
@@ -174,6 +185,7 @@ function AboutUsView() {
           </div>
         </div>
       </footer>
+    </div>
     </div>
   );
 }
