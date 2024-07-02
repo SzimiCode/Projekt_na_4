@@ -8,6 +8,41 @@ function Login() {
   const [isLogin, setIsLogin] = useState(true);
 
   return (
+    <div>
+    {/* Navbar */}
+    <nav className="navbar navbar-expand-lg bg-body-tertiary gradient-navbar">
+      <div className="container-fluid">
+        <a className="navbar-brand" href="../MainView/mainView.html">
+          <img src="https://s3u.tmimgcdn.com/u37752224/43c1a0392276fa50b4cfa03170da0d9e.gif" alt="Box" height="20" />
+          TaskHero
+        </a>
+        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            <li className="nav-item">
+              <a className="nav-link" href="../MainView/mainView.html">Home</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="../ToDoListView/ToDoListView.html">ToDoList</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="../CalendarView/CalendarView.html">Calendar</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="../AboutUsView">About Us</a>
+            </li>
+          </ul>
+          <ul className="navbar-nav ml-auto">
+            <li className="nav-item">
+              <a className="nav-link" href="../login">Log Out</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
     <section className="h-100 gradient-form" style={{ backgroundColor: '#eee' }}>
       <div className="container py-5 h-100">
         <div className="row d-flex justify-content-center align-items-center h-100">
@@ -57,6 +92,7 @@ function Login() {
         </div>
       </div>
     </section>
+    </div>
   );
 }
 
