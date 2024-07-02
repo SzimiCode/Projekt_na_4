@@ -1,7 +1,8 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import "../styles/style.css"; // Upewnij się, że ścieżka do pliku CSS jest poprawna
+import "../styles/style.css";
+import Form from "../components/Form";
 
 function Login() {
   return (
@@ -21,44 +22,7 @@ function Login() {
                       />
                       <h4 className="mt-1 mb-5 pb-1">TaskHero</h4>
                     </div>
-                    <form>
-                      <p className="mb-5">Please login to your account</p>
-                      <div className="form-outline mb-4">
-                        <input
-                          type="email"
-                          id="form2Example11"
-                          className="form-control"
-                          placeholder="Phone number or email address"
-                        />
-                        <label className="form-label" htmlFor="form2Example11">Username</label>
-                      </div>
-                      <div className="form-outline mb-4">
-                        <input
-                          type="password"
-                          id="form2Example22"
-                          className="form-control"
-                        />
-                        <label className="form-label" htmlFor="form2Example22">Password</label>
-                      </div>
-                      <div className="text-center pt-1 mb-5 pb-1">
-                        <button
-                          className="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3"
-                          type="button"
-                        >
-                          Log in
-                        </button>
-                       
-                      </div>
-                      <div className="d-flex align-items-center justify-content-center pb-4">
-                        <p className="mb-0 me-2">Don't have an account?</p>
-                        <button
-                          type="button"
-                          className="btn btn-outline-dark"
-                        >
-                          Create new
-                        </button>
-                      </div>
-                    </form>
+                    <Form route="/api/token/" method="login" />
                   </div>
                 </div>
                 <div className="col-lg-6 d-flex align-items-center gradient-custom-2">
