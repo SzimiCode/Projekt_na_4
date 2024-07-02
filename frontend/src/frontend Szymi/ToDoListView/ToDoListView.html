@@ -6,6 +6,14 @@
     <title>TaskHero</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="../style.css">
+     <!-- Bootstrap CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <style>
+    .custom-modal {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+  </style>
 
 </head>
 <body>
@@ -37,21 +45,23 @@
      <!-- Search Bar -->
      <div class="container mt-5">
      <div class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="Search tasks" aria-label="Search tasks">
+        
         <div class="button-container text-center">
             <button class="btn gradient-button mx-2" id="addTaskButton">Add</button>
         </div>
       </div>
 <!-- Task Sections -->
 <div class="card mb-3">
-    <div class="card-header bg-custom-pink text-white">
-      <h5 class="mb-0">Category 1</h5>
+    <div class="card-header bg-custom-pink text-black">
+      <h5 class="mb-0">Family</h5>
     </div>
     <ul class="list-group list-group-flush">
+      <!-- NASZ JEDEN TASK-->
       <li class="list-group-item">
         <div class="d-flex justify-content-between align-items-center">
           <div class="d-flex align-items-center">
             <input type="checkbox" class="task-checkbox">
+
             <span class="ml-2">Task 1</span>
           </div>
           <div class="d-flex align-items-center">
@@ -62,6 +72,7 @@
           </div>
         </div>
       </li>
+      <!-- TU SIE KONCZY TASK-->
       <li class="list-group-item">
         <div class="d-flex justify-content-between align-items-center">
           <div class="d-flex align-items-center">
@@ -105,8 +116,8 @@
   </div>
   
   <div class="card mb-3">
-    <div class="card-header bg-custom-violet text-white">
-      <h5 class="mb-0">Category 2</h5>
+    <div class="card-header bg-custom-violet text-black">
+      <h5 class="mb-0">Work</h5>
     </div>
     <ul class="list-group list-group-flush">
       <li class="list-group-item">
@@ -165,8 +176,8 @@
   </div>
   
   <div class="card mb-3">
-    <div class="card-header bg-custom-pink text-white">
-      <h5 class="mb-0">Category 3</h5>
+    <div class="card-header bg-custom-pink text-black">
+      <h5 class="mb-0">Life</h5>
     </div>
     <ul class="list-group list-group-flush">
       <li class="list-group-item">
@@ -226,7 +237,6 @@
   
 </div>
 <!-- POPPING VIEW -->
-<!-- Modal -->
 <div class="modal fade" id="taskModal" tabindex="-1" aria-labelledby="taskModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
@@ -246,11 +256,16 @@
           </div>
           <div class="mb-3">
             <label for="taskCategory" class="form-label">Category</label>
-            <input type="text" class="form-control" id="taskCategory" required>
+            <select class="form-select" id="taskCategory" required>
+              <option value="">Select a category</option>
+              <option value="Family">Family</option>
+              <option value="Work">Work</option>
+              <option value="Life">Life</option>
+            </select>
           </div>
           <div class="mb-3">
             <label for="taskXp" class="form-label">XP</label>
-            <input type="number" class="form-control" id="taskXp" required>
+            <input type="number" class="form-control" id="taskXp" required min="0">
           </div>
           <div class="mb-3">
             <label for="taskDate" class="form-label">Date</label>
@@ -259,13 +274,13 @@
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-violet" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-pink" id="saveTaskButton">Save changes</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="saveTaskButton">Save changes</button>
+
       </div>
     </div>
   </div>
 </div>
-
 <footer class="mt-auto gradient-background footer text-white">
   <div class="container ">
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 mt-5 border-top text-white">
@@ -311,21 +326,19 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  const checkboxes = document.querySelectorAll('.task-checkbox');
+ <!-- Your Custom JavaScript -->
+ <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var openModalButton = document.getElementById('openModalButton');
+    var testModal = new bootstrap.Modal(document.getElementById('testModal'), {
+      backdrop: 'static', // static for not closing on backdrop click
+      keyboard: false // false for not closing on escape key press
+    });
 
-  checkboxes.forEach(checkbox => {
-    checkbox.addEventListener('change', function() {
-      const taskText = this.nextElementSibling;
-      if (this.checked) {
-        taskText.classList.add('completed');
-      } else {
-        taskText.classList.remove('completed');
-      }
+    openModalButton.addEventListener('click', function () {
+      testModal.show();
     });
   });
-});
 </script>
 
 

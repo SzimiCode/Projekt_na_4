@@ -1,11 +1,51 @@
-import React from "react";
+
+import React, { useEffect } from "react";
 import "../styles/style.css";
-// import 'bootstrap/dist/css/bootstrap.min.css';
-// import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import catImage from '../assets/Images/cat.jpg';
+import womanImage from '../assets/Images/woman.jpg';
+import manWorkingImage from '../assets/Images/Man-working.jpg';
+//import 'bootstrap/dist/css/bootstrap.min.css';
+//import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 function AboutUsView() {
+  
   return (
-    <div className="container-fluid p-0">
+    <div>
+      {/* Navbar */}
+      <nav className="navbar navbar-expand-lg bg-body-tertiary gradient-navbar">
+        <div className="container-fluid">
+          <a className="navbar-brand" href="../MainView/mainView.html">
+            <img src="https://s3u.tmimgcdn.com/u37752224/43c1a0392276fa50b4cfa03170da0d9e.gif" alt="Box" height="20" />
+            TaskHero
+          </a>
+          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+              <li className="nav-item">
+                <a className="nav-link" href="../MainView/mainView.html">Home</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="../ToDoListView/ToDoListView.html">ToDoList</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="../CalendarView/CalendarView.html">Calendar</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="../AboutUsView">About Us</a>
+              </li>
+            </ul>
+            <ul className="navbar-nav ml-auto">
+              <li className="nav-item">
+                <a className="nav-link" href="../login">Log Out</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <div className="container-fluid p-0" style={{ marginTop: '0px' }}>
       <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
         <div className="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active"
@@ -17,21 +57,21 @@ function AboutUsView() {
         </div>
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <img src="./assets/Images/cat.jpg" className="d-block w-100" alt="couple" />
+            <img src={catImage} className="d-block w-100" alt="couple" />
             <div className="carousel-caption">
-              <h1>Task Management</h1>
+              <h1>Task Managment</h1>
               <p>Easily create, organize, and prioritize your tasks. With our intuitive interface, you'll be able to keep everything in check and never feel overwhelmed.</p>
             </div>
           </div>
           <div className="carousel-item">
-            <img src="../Images/woman.jpg" className="d-block w-100" alt="dog" />
+            <img src={womanImage} className="d-block w-100" alt="dog" />
             <div className="carousel-caption">
               <h1>XP and Rewards</h1>
               <p>Turn your productivity into a game! Earn experience points (XP) as you complete tasks and reach new levels. Unlock rewards and badges to keep you motivated.</p>
             </div>
           </div>
           <div className="carousel-item">
-            <img src="../Images/Man-working.jpg" className="d-block w-100" alt="family" />
+            <img src={manWorkingImage} className="d-block w-100" alt="family" />
             <div className="carousel-caption">
               <h1>Never Be Late</h1>
               <p>With Task Hero, you will receive timely reminders and notifications, so you will never miss an important task or appointment again. Stay ahead of your schedule and make procrastination a thing of the past.</p>
@@ -144,6 +184,7 @@ function AboutUsView() {
           </div>
         </div>
       </footer>
+    </div>
     </div>
   );
 }
