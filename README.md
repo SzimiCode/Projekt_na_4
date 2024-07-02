@@ -11,6 +11,9 @@ To do:
 
 1. Database:
 
+
+![Diagram encji](https://github.com/KasmyrA/Projekt_na_4/raw/main/Docs/Djagram%20encji.svg)
+
     Calendar Event (per user?):
         +id
         +summary
