@@ -4,6 +4,7 @@ import Note from "../components/Note"
 import "../styles/Home.css"
 
 function Home() {
+    /* 
     const [notes, setNotes] = useState([]);
     const [content, setContent] = useState("");
     const [title, setTitle] = useState("");
@@ -79,7 +80,9 @@ function Home() {
                 <input type="submit" value="Submit"></input>
             </form>
         </div>
+        
     );
+    */
 }
 
 export default Home;
