@@ -12,7 +12,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'; // Zaimportowanie Bootstrapa CSS
 
 function Home() {
   return (
-    <div id="wrapper" className="mt-5">
+    <div id="wrapper" >
       {/* Navbar */}
       <nav className="navbar navbar-expand-lg bg-body-tertiary gradient-navbar">
         <div className="container-fluid">
@@ -36,7 +36,7 @@ function Home() {
                 <a className="nav-link" href="../CalendarView/CalendarView.html">Calendar</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="../AboutUseView/AboutUsView.html">About Us</a>
+                <a className="nav-link" href="../AboutUsView">About Us</a>
               </li>
             </ul>
           </div>
@@ -50,7 +50,7 @@ function Home() {
           {/* Begin Page Content */}
           <div className="container-fluid">
             {/* Page Heading */}
-            <div className="d-flex justify-content-center mb-4">
+            <div className="d-flex justify-content-center mb-4 mt-4">
               <h1 className="h1 text-gray-800 fw-bold">Dashboard</h1>
             </div>
 
@@ -208,7 +208,7 @@ function Home() {
   );
 }
 
-export default Dashboard;
+export default Home;
     /* 
     const [notes, setNotes] = useState([]);
     const [content, setContent] = useState("");
