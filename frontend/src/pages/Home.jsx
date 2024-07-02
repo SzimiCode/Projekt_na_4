@@ -9,7 +9,6 @@ import manWorkingImage from '../assets/Images/Man-working.jpg';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Zaimportowanie Bootstrapa CSS
 
 
-
 function Home() {
   return (
     <div id="wrapper" >
