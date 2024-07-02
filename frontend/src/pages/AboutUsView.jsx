@@ -3,7 +3,7 @@ import "../styles/style.css";
 import catImage from '../assets/Images/cat.jpg';
 import womanImage from '../assets/Images/woman.jpg';
 import manWorkingImage from '../assets/Images/Man-working.jpg';
-import Navbar from "../components/navbar";
+import Navbar from "../components/Navbar";
 
 function AboutUsView() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
