@@ -1,11 +1,41 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../styles/style.css";
-//import 'bootstrap/dist/css/bootstrap.min.css';
-//import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import catImage from '../assets/Images/cat.jpg';
+import womanImage from '../assets/Images/woman.jpg';
+import manWorkingImage from '../assets/Images/Man-working.jpg';
 
 function AboutUsView() {
+  useEffect(() => {
+    // Funkcja do załadowania skryptu
+    const loadScript = (src) => {
+      return new Promise((resolve, reject) => {
+        const script = document.createElement('script');
+        script.src = src;
+        script.async = true;
+        script.onload = () => resolve(script);
+        script.onerror = () => reject(new Error(`Script load error for ${src}`));
+        document.body.appendChild(script);
+      });
+    };
+
+    // Załaduj skrypt Bootstrap
+    loadScript("https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js")
+      .then(() => {
+        console.log('Bootstrap script loaded successfully.');
+      })
+      .catch(err => {
+        console.error('Failed to load the Bootstrap script:', err);
+      });
+
+    // Czystka po usunięciu komponentu
+    return () => {
+      const scripts = document.querySelectorAll('script[src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"]');
+      scripts.forEach(script => script.remove());
+    };
+  }, []);
+
   return (
-    <div className="container-fluid p-0" style={{ marginTop: '20px' }}>
+    <div className="container-fluid p-0" style={{ marginTop: '0px' }}>
       <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
         <div className="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active"
@@ -17,21 +47,21 @@ function AboutUsView() {
         </div>
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <img src="./assets/Images/cat.jpg" className="d-block w-100" alt="couple" />
+            <img src={catImage} className="d-block w-100" alt="couple" />
             <div className="carousel-caption">
-              <h1>Task Managekjhkjment</h1>
+              <h1>Task Management</h1>
               <p>Easily create, organize, and prioritize your tasks. With our intuitive interface, you'll be able to keep everything in check and never feel overwhelmed.</p>
             </div>
           </div>
           <div className="carousel-item">
-            <img src="../Images/woman.jpg" className="d-block w-100" alt="dog" />
+            <img src={womanImage} className="d-block w-100" alt="dog" />
             <div className="carousel-caption">
               <h1>XP and Rewards</h1>
               <p>Turn your productivity into a game! Earn experience points (XP) as you complete tasks and reach new levels. Unlock rewards and badges to keep you motivated.</p>
             </div>
           </div>
           <div className="carousel-item">
-            <img src="../Images/Man-working.jpg" className="d-block w-100" alt="family" />
+            <img src={manWorkingImage} className="d-block w-100" alt="family" />
             <div className="carousel-caption">
               <h1>Never Be Late</h1>
               <p>With Task Hero, you will receive timely reminders and notifications, so you will never miss an important task or appointment again. Stay ahead of your schedule and make procrastination a thing of the past.</p>
