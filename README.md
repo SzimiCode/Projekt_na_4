@@ -15,34 +15,33 @@ To do:
 ![Diagram encji](https://github.com/KasmyrA/Projekt_na_4/raw/main/Docs/Djagram%20encji.svg)
 
     Calendar Event (per user?):
-        +id
-        +summary
-        +start_time
-        +end_time
-        +description
-        +geo
-        +public/not_public
+        + id
+        + summary
+        + start_time
+        + end_time
+        + description
+        + geo
+        + public/not_public
 
     User:
-        +login
-        +password
-        +settings
-        +id
+        + login
+        + password
+        + settings
+        + id
 
     Exp:
-        +id of event
-        +completion_status
-        +finished_time
-        +userId
-        +points
-        +description
+        + id of event
+        + completion_status
+        + finished_time
+        + userId
+        + points
+        + description
     
 
 
     
     
-    
-    In future:
+In future:
         +working with google callendar api.
     
     
