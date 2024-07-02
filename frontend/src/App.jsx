@@ -7,7 +7,7 @@ import NotFound from "./pages/NotFound"
 import ProtectedRoute from "./components/ProtectedRoute"
 import SzymView from "./pages/AboutUsView"
 import ToDoListView from "./pages/ToDoListView"
-import CalendarView from "./pages/CalendarView"
+import CalendarView from "./pages/calendarView"
 
 
 function Logout() {

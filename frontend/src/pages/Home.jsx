@@ -29,10 +29,10 @@ function Home() {
                 <a className="nav-link" href="../">Home</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="../ToDoListView/ToDoListView.html">ToDoList</a>
+                <a className="nav-link" href="../ToDoList">ToDoList</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="../CalendarView/CalendarView.html">Calendar</a>
+                <a className="nav-link" href="../calendar">Calendar</a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="../AboutUsView">About Us</a>
