@@ -2,15 +2,15 @@ import { useState, useEffect } from "react";
 import api from "../api";
 import Note from "../components/Note"
 import "../styles/Home.css"
-
-function Home() {
-    import React from 'react';
+import React from 'react';
 import catImage from '../assets/Images/cat.jpg'; // Zaimportowane obrazy do przykładu
 import womanImage from '../assets/Images/woman.jpg';
 import manWorkingImage from '../assets/Images/Man-working.jpg';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Zaimportowanie Bootstrapa CSS
 
-function Dashboard() {
+
+
+function Home() {
   return (
     <div id="wrapper" className="mt-5">
       {/* Navbar */}
@@ -288,4 +288,4 @@ export default Dashboard;
         
     );
     */
-}
+
