@@ -23,22 +23,11 @@ function Login() {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a className="nav-link" href="../MainView/mainView.html">Home</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="../ToDoListView/ToDoListView.html">ToDoList</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="../CalendarView/CalendarView.html">Calendar</a>
-            </li>
-            <li className="nav-item">
               <a className="nav-link" href="../AboutUsView">About Us</a>
             </li>
           </ul>
           <ul className="navbar-nav ml-auto">
-            <li className="nav-item">
-              <a className="nav-link" href="../login">Log Out</a>
-            </li>
+          
           </ul>
         </div>
       </div>
