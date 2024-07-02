@@ -29,6 +29,22 @@ function App() {
             </ProtectedRoute>
           }
         />
+        <Route
+          path="/calendar"
+          element={
+            <ProtectedRoute>
+              <calendarView />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/ToDoList"
+          element={
+            <ProtectedRoute>
+              <ToDoListView/>
+            </ProtectedRoute>
+          }
+        />
         <Route path="/login" 
           element={<Login />} />
         <Route path="/logout" 
