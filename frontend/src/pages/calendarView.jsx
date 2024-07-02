@@ -33,6 +33,7 @@ const CalendarView = () => {
   const dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
   const [currentDate, setCurrentDate] = useState(new Date());
+  const [modalData, setModalData] = useState({ isOpen: false, events: [], date: '' });
 
   useEffect(() => {
     renderCalendar();
@@ -48,7 +49,7 @@ const CalendarView = () => {
     const calendarDays = [];
 
     for (let i = 0; i < firstDayIndex; i++) {
-      calendarDays.push(<div key={`empty-${i}`} className="day"></div>);
+      calendarDays.push(<div key={`empty-${i}`} className="day empty"></div>);
     }
 
     for (let day = 1; day <= daysInMonth; day++) {
@@ -72,9 +73,11 @@ const CalendarView = () => {
 
   const showModal = (date) => {
     const eventDetails = events[date] || [];
+    setModalData({ isOpen: true, events: eventDetails, date });
+  };
 
-    // Implementacja logiki otwierania modala lub innego rodzaju widoku szczegółów eventu
-    console.log('Show details for:', date, eventDetails);
+  const closeModal = () => {
+    setModalData({ isOpen: false, events: [], date: '' });
   };
 
   const handlePrevMonth = () => {
@@ -87,8 +90,8 @@ const CalendarView = () => {
 
   return (
     <div>
-         {/* Navbar */}
-         <nav className="navbar navbar-expand-lg bg-body-tertiary gradient-navbar">
+      {/* Navbar */}
+      <nav className="navbar navbar-expand-lg bg-body-tertiary gradient-navbar">
         <div className="container-fluid">
           <a className="navbar-brand" href="../">
             <img src="https://s3u.tmimgcdn.com/u37752224/43c1a0392276fa50b4cfa03170da0d9e.gif" alt="Box" height="20" />
@@ -135,17 +138,30 @@ const CalendarView = () => {
         <div id="calendar" className="days">
           {renderCalendar()}
         </div>
+        <div className="calendar-navigation">
+          <button className="nav-button" onClick={handlePrevMonth}>Previous Month</button>
+          <button className="nav-button" onClick={handleNextMonth}>Next Month</button>
+        </div>
       </div>
 
       {/* Modal */}
-      <div id="event-modal" className="modal">
-        <div className="modal-content">
-          <span className="close">&times;</span>
-          <h2>Events</h2>
-          <div id="event-details"></div>
+      {modalData.isOpen && (
+        <div id="event-modal" className="modal">
+          <div className="modal-content">
+            <span className="close" onClick={closeModal}>&times;</span>
+            <h2>Events for {modalData.date}</h2>
+            <div id="event-details">
+              {modalData.events.map((event, index) => (
+                <div key={index} className={`event ${event.type}`}>
+                  {event.name}
+                </div>
+              ))}
+            </div>
+          </div>
+          
         </div>
-      </div>
-      <footer className="mt-auto gradient-background footer text-white">
+      )}
+            <footer className="mt-auto gradient-background footer text-white">
         <div className="container">
           <div className="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 mt-5 border-top text-white">
             <div className="col mb-3">
@@ -183,11 +199,7 @@ const CalendarView = () => {
         </div>
       </footer>
     </div>
-     
 
-
-
-     
   );
 };
 
