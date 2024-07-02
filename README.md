@@ -34,7 +34,19 @@ To do:
         +points
         +description
     
-
+    ```mermaid
+erDiagram
+    CUSTOMER {
+        string Name
+        string Email
+        string Phone
+    }
+    ORDER {
+        int OrderID
+        date OrderDate
+        float TotalAmount
+    }
+    CUSTOMER ||--o{ ORDER : places
 
     
     
