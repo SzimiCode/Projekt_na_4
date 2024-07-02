@@ -1,11 +1,11 @@
 import React from "react";
 import "../styles/style.css";
-// import 'bootstrap/dist/css/bootstrap.min.css';
-// import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+//import 'bootstrap/dist/css/bootstrap.min.css';
+//import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 function AboutUsView() {
   return (
-    <div className="container-fluid p-0">
+    <div className="container-fluid p-0" style={{ marginTop: '20px' }}>
       <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
         <div className="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active"
@@ -19,7 +19,7 @@ function AboutUsView() {
           <div className="carousel-item active">
             <img src="./assets/Images/cat.jpg" className="d-block w-100" alt="couple" />
             <div className="carousel-caption">
-              <h1>Task Management</h1>
+              <h1>Task Managekjhkjment</h1>
               <p>Easily create, organize, and prioritize your tasks. With our intuitive interface, you'll be able to keep everything in check and never feel overwhelmed.</p>
             </div>
           </div>
