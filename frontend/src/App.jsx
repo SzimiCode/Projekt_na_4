@@ -9,7 +9,10 @@ import SzymView from "./pages/AboutUsView"
 import ToDoListView from "./pages/ToDoListView"
 import CalendarView from "./pages/calendarView"
 
-
+function Logout() {
+  localStorage.clear()
+  return <Navigate to="/login" />
+}
 function Logout() {
   localStorage.clear()
   return <Navigate to="/login" />
@@ -60,6 +63,7 @@ function App() {
          element={<NotFound />}></Route>
       </Routes>
     </BrowserRouter>
+    
   )
 }
 
