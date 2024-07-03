@@ -7,6 +7,7 @@ import catImage from '../assets/Images/cat.jpg'; // Zaimportowane obrazy do przy
 import womanImage from '../assets/Images/woman.jpg';
 import manWorkingImage from '../assets/Images/Man-working.jpg';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Zaimportowanie Bootstrapa CSS
+import { BrowserRouter as Router, Route, Routes, Link, Navigate } from 'react-router-dom';
 
 
 function Home() {
@@ -29,13 +30,18 @@ function Home() {
                 <a className="nav-link" href="../">Home</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="../ToDoListView/ToDoListView.html">ToDoList</a>
+                <a className="nav-link" href="../ToDoList">ToDoList</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="../CalendarView/CalendarView.html">Calendar</a>
+                <a className="nav-link" href="../calendar">Calendar</a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="../AboutUsView">About Us</a>
+              </li>
+            </ul>
+            <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li className="nav-item">
+                <Link className="btn btn-outline-danger nav-link" to="/logout">Log out</Link>
               </li>
             </ul>
           </div>

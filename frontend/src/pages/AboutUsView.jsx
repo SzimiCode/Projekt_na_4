@@ -6,13 +6,14 @@ import womanImage from '../assets/Images/woman.jpg';
 import manWorkingImage from '../assets/Images/Man-working.jpg';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import { BrowserRouter as Router, Route, Routes, Link, Navigate } from 'react-router-dom';
 
 function AboutUsView() {
   
   return (
     <div>
       {/* Navbar */}
-      <nav className="navbar navbar-expand-lg bg-body-tertiary gradient-navbar">
+   <nav className="navbar navbar-expand-lg bg-body-tertiary gradient-navbar">
         <div className="container-fluid">
           <a className="navbar-brand" href="../">
             <img src="https://s3u.tmimgcdn.com/u37752224/43c1a0392276fa50b4cfa03170da0d9e.gif" alt="Box" height="20" />
@@ -28,18 +29,18 @@ function AboutUsView() {
                 <a className="nav-link" href="../">Home</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="../ToDoListView/ToDoListView.html">ToDoList</a>
+                <a className="nav-link" href="../ToDoList">ToDoList</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="../CalendarView/CalendarView.html">Calendar</a>
+                <a className="nav-link" href="../calendar">Calendar</a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="../AboutUsView">About Us</a>
               </li>
             </ul>
-            <ul className="navbar-nav ml-auto">
+            <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link" href="../login">Log Out</a>
+                <Link className="btn btn-outline-danger nav-link" to="/logout">Log out</Link>
               </li>
             </ul>
           </div>

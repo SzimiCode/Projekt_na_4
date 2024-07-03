@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import "../styles/style.css";
+import { BrowserRouter as Router, Route, Routes, Link, Navigate } from 'react-router-dom';
 
 const CalendarView = () => {
   const [events] = useState({
@@ -33,10 +34,11 @@ const CalendarView = () => {
   const dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
   const [currentDate, setCurrentDate] = useState(new Date());
+  const [modalData, setModalData] = useState({ isOpen: false, events: [], date: '' });
 
   useEffect(() => {
     renderCalendar();
-  }, []);
+  }, [currentDate]);
 
   const renderCalendar = () => {
     const month = currentDate.getMonth();
@@ -48,7 +50,7 @@ const CalendarView = () => {
     const calendarDays = [];
 
     for (let i = 0; i < firstDayIndex; i++) {
-      calendarDays.push(<div key={`empty-${i}`} className="day"></div>);
+      calendarDays.push(<div key={`empty-${i}`} className="day empty"></div>);
     }
 
     for (let day = 1; day <= daysInMonth; day++) {
@@ -72,9 +74,11 @@ const CalendarView = () => {
 
   const showModal = (date) => {
     const eventDetails = events[date] || [];
+    setModalData({ isOpen: true, events: eventDetails, date });
+  };
 
-    // Implementacja logiki otwierania modala lub innego rodzaju widoku szczegółów eventu
-    console.log('Show details for:', date, eventDetails);
+  const closeModal = () => {
+    setModalData({ isOpen: false, events: [], date: '' });
   };
 
   const handlePrevMonth = () => {
@@ -87,8 +91,8 @@ const CalendarView = () => {
 
   return (
     <div>
-         {/* Navbar */}
-         <nav className="navbar navbar-expand-lg bg-body-tertiary gradient-navbar">
+   {/* Navbar */}
+   <nav className="navbar navbar-expand-lg bg-body-tertiary gradient-navbar">
         <div className="container-fluid">
           <a className="navbar-brand" href="../">
             <img src="https://s3u.tmimgcdn.com/u37752224/43c1a0392276fa50b4cfa03170da0d9e.gif" alt="Box" height="20" />
@@ -104,24 +108,23 @@ const CalendarView = () => {
                 <a className="nav-link" href="../">Home</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="../ToDoListView/ToDoListView.html">ToDoList</a>
+                <a className="nav-link" href="../ToDoList">ToDoList</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="../calendarView">Calendar</a>
+                <a className="nav-link" href="../calendar">Calendar</a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="../AboutUsView">About Us</a>
               </li>
             </ul>
-            <ul className="navbar-nav ml-auto">
+            <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link" href="../login">Log Out</a>
+                <Link className="btn btn-outline-danger nav-link" to="/logout">Log out</Link>
               </li>
             </ul>
           </div>
         </div>
       </nav>
-
       {/* Kalendarz */}
       <div className="calendar-container mt-5">
         <div id="monthYear" className="month-year">
@@ -135,17 +138,68 @@ const CalendarView = () => {
         <div id="calendar" className="days">
           {renderCalendar()}
         </div>
+        <div className="calendar-navigation">
+          <button className="nav-button" onClick={handlePrevMonth}>Previous Month</button>
+          <button className="nav-button" onClick={handleNextMonth}>Next Month</button>
+        </div>
       </div>
 
       {/* Modal */}
-      <div id="event-modal" className="modal">
-        <div className="modal-content">
-          <span className="close">&times;</span>
-          <h2>Events</h2>
-          <div id="event-details"></div>
+      {modalData.isOpen && (
+        <div id="event-modal" className="modal">
+          <div className="modal-content">
+            <span className="close" onClick={closeModal}>&times;</span>
+            <h2>Events for {modalData.date}</h2>
+            <div id="event-details">
+              {modalData.events.map((event, index) => (
+                <div key={index} className={`event ${event.type}`}>
+                  {event.name}
+                </div>
+              ))}
+            </div>
+          </div>
+          
         </div>
-      </div>
+      )}
+            <footer className="mt-auto gradient-background footer text-white">
+        <div className="container">
+          <div className="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 mt-5 border-top text-white">
+            <div className="col mb-3">
+              <a href="/" className="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none text-white">
+                <svg className="bi me-2" width="40" height="32"><use xlinkHref="#bootstrap"></use></svg>
+              </a>
+              <p className="text-white">TaskHero© 2024</p>
+            </div>
+            <div className="col mb-3"></div>
+            <div className="col mb-3">
+              <h5 className="text-white">Szymon Molitorys</h5>
+              <ul className="nav flex-column">
+                <li className="nav-item mb-2"><a href="https://www.facebook.com/profile.php?id=100011046400675" className="nav-link p-0 text-white">Facebook</a></li>
+                <li className="nav-item mb-2"><a href="https://github.com/SzimiCode" className="nav-link p-0 text-white">Github</a></li>
+                <li className="nav-item mb-2"><a href="https://www.instagram.com" className="nav-link p-0 text-white">Instagram</a></li>
+              </ul>
+            </div>
+            <div className="col mb-3">
+              <h5 className="text-white">Bartłomiej Piłot</h5>
+              <ul className="nav flex-column">
+                <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-white">Facebook</a></li>
+                <li className="nav-item mb-2"><a href="https://github.com/MFSTL1" className="nav-link p-0 text-white">Github</a></li>
+                <li className="nav-item mb-2"><a href="https://www.instagram.com" className="nav-link p-0 text-white">Instagram</a></li>
+              </ul>
+            </div>
+            <div className="col mb-3">
+              <h5 className="text-white">Kacper Smyrak</h5>
+              <ul className="nav flex-column">
+                <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-white">Facebook</a></li>
+                <li className="nav-item mb-2"><a href="https://github.com/KasmyrA" className="nav-link p-0 text-white">Github</a></li>
+                <li className="nav-item mb-2"><a href="https://www.instagram.com" className="nav-link p-0 text-white">Instagram</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
+
   );
 };
 
