@@ -11,8 +11,8 @@ function AboutUsView() {
   
   return (
     <div>
-      {/* Navbar */}
-      <nav className="navbar navbar-expand-lg bg-body-tertiary gradient-navbar">
+    {/* Navbar */}
+    <nav className="navbar navbar-expand-lg bg-body-tertiary gradient-navbar">
         <div className="container-fluid">
           <a className="navbar-brand" href="../">
             <img src="https://s3u.tmimgcdn.com/u37752224/43c1a0392276fa50b4cfa03170da0d9e.gif" alt="Box" height="20" />
@@ -39,7 +39,7 @@ function AboutUsView() {
             </ul>
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link className="nav-link" to="/logout">Log out</Link>
+                <Link className="btn btn-outline-danger nav-link" to="/logout">Log out</Link>
               </li>
             </ul>
           </div>
