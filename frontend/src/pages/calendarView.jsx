@@ -125,6 +125,7 @@ const CalendarView = () => {
           </div>
         </div>
       </nav>
+      
       {/* Kalendarz */}
       <div className="calendar-container mt-5">
         <div id="monthYear" className="month-year">
