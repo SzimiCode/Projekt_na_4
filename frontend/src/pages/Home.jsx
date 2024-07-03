@@ -37,7 +37,7 @@ function Home() {
               <li className="nav-item">
                 <a className="nav-link" href="../AboutUsView">About Us</a>
               </li>
-              <Route path="/logout" element={<Logout />} />
+             
             </ul>
           </div>
         </div>

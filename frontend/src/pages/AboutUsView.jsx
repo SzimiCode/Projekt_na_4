@@ -11,7 +11,6 @@ function AboutUsView() {
   
   return (
     <div>
-      <div id="wrapper">
       {/* Navbar */}
       <nav className="navbar navbar-expand-lg bg-body-tertiary gradient-navbar">
         <div className="container-fluid">
